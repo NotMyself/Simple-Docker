@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  webui:
+    container_name: webui
+    image: webui
+    build:
+      context: ./src/webui
+      dockerfile: Dockerfile
+      args:
+        source: ./build
+    ports:
+      - "5000:80"
