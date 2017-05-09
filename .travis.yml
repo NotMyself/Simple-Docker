@@ -31,9 +31,9 @@ install:
   - docker pull microsoft/aspnetcore:1.1
   
 script:
-  - docker-compose -f .\docker-compose.build.yml -p netcorebuild run ci-build
-  - docker-compose -f .\docker-compose.yml -p webui build
-  - docker-compose -f .\docker-compose.yml -p webui up -d
+  - docker-compose -f docker-compose.build.yml -p netcorebuild run ci-build
+  - docker-compose -f docker-compose.yml -p webui build
+  - docker-compose -f docker-compose.yml -p webui up -d
   - docker ps
   - docker logs webui
   - curl http://webui.io:5000
