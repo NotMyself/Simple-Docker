@@ -9,9 +9,7 @@
 #    environment configuration    #
 #---------------------------------#
 sudo: required
-language: csharp
-mono: none
-dotnet: 1.0.1
+language: ruby
 dist: trusty
 
 services:
